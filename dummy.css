@@ -1,0 +1,35 @@
+*{
+    padding:0;
+    margin:0;
+    font-family: sans-serif;
+}
+body{
+    width: 100%;
+    height: 100%;
+
+}
+.main-content{
+    display: flex;
+    justify-content: space-around;
+    background-color: #37474F;
+    width: 30%;
+    margin: 10% 19%;
+    padding: 5% 5%;
+    border-radius: 40px;
+}
+ .login-form{
+    width: 350px;
+}
+ .login-form h2{
+    font-size: 30px;
+    font-stretch: expanded;
+    text-transform: uppercase;
+
+    color: #DEE4E7;
+}
+ .login-form p{
+    font-size: 18px;
+    text-transform:lowercase;
+    
+    color: wheat;
+}
