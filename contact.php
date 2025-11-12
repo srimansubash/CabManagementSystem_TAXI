@@ -17,7 +17,7 @@
     </div>
     <div class="main-content">
     <div class="context">
-        <h1 style="color:#ACDDDE;"> Contact us  Ph.no: 9443411851 
+        <h1 style="color:#ACDDDE;"> Contact us  Ph.no: +12 345739457
         <br> E-mail:cabservice@gmail.com </h1><br>
 
        <h2 style="color:#BDD4E7;">Rider's Thoughts</h2>
