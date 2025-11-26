@@ -1,3 +1,45 @@
+# For LIVE DEMO - Blue Taxi - Cab Management System
+
+A static website for taxi booking and management built with HTML, CSS, and JavaScript.
+
+## Features
+
+- Customer review system
+- Admin login and registration
+- Responsive design
+- LocalStorage for data persistence
+
+## How to Deploy on GitHub Pages
+
+1. Create a new repository on GitHub
+2. Upload all files to the repository
+3. Go to Settings → Pages
+4. Set source to `main` branch
+5. Your site will be live at `https://yourusername.github.io/CabManagementSystem/`
+
+## Default Admin Credentials
+
+- Username: `admin`
+- Password: `admin123`
+
+## Technologies Used
+
+- HTML5
+- CSS3
+- JavaScript (ES6)
+- LocalStorage API
+- Font Awesome Icons
+
+## Browser Compatibility
+
+Works on all modern browsers that support localStorage.
+
+## License
+
+Free to use for educational purposes.
+
+
+**ACTUAL PROJECT:**
 Developed a cab management system using HTML, CSS, Bootstrap for frontend, MySQL with XAMPP,
 PHP for backend. It monitors taxi conditions, schedules servicing, and enhances performance for user
 satisfaction.
