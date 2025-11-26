@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Review</title>
+    <link rel="stylesheet" href="customer.css">
+</head>
+<body>
+    <div class="banner">
+        <div class="navbar">
+            <div class="design"><h2>Blue taxi</h2></div>
+            <ul>
+                <li><a href="admin.html">Admin</a></li>
+                <li><a href="register.html">Registration</a></li>
+                <li><a href="custview.html">Review by Customers</a></li>  
+                <li><a href="index.html">Move to home page</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="main-content">
+        <div class="context">
+            <div class="login-form">
+                <form id="reviewForm">
+                    <br><p>Customer name</p>
+                    <input type="text" id="cname" name="cname" placeholder="Customer name" required><br>
+                    <br><p>Customer comments</p>
+                    <input type="text" id="customer" name="customer" placeholder="Type your comments" required><br>
+                    <br><button type="submit">submit</button><br>
+                </form>
+                <p id="message" style="color:white; margin-top: 10px;"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="reviews.js"></script>
+</body>
+</html>
