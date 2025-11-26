@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Home Page</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <div class="banner">
+        <div class="navbar">
+            <div><h2>Cab Management System</h2></div>
+            <ul>
+                <li><a href="human-resource.html">Human resource</a></li>
+                <li><a href="travel.html">Travel history</a></li>
+                <li><a href="sms.html">SMS alert</a></li>
+                <li><a href="service.html">Service renewal</a></li>
+                <li><a href="index.html" onclick="logout()">Logout</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="content">
+        <h1>WELCOME</h1>
+        <p>For more information please select the below box to fetch information.<br> Thank you </p>
+        <div>
+            <button type="button"><span></span><a href="search.html">Search</a></button>
+            <button type="button"><span></span><a href="serviceview.html">Service Renewal details</a></button>
+        </div>
+    </div>
+
+    <script>
+        // Check if user is logged in
+        if (!sessionStorage.getItem('loggedIn')) {
+            window.location.href = 'admin.html';
+        }
+
+        function logout() {
+            sessionStorage.removeItem('loggedIn');
+        }
+    </script>
+</body>
+</html>

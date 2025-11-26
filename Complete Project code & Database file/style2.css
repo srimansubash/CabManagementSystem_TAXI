@@ -1,99 +1,93 @@
-* {
-    margin: 0;
-    padding: 0;
+*{
+    margin:0;
+    padding:0;
+    
 }
-
-.banner {
+.banner{
     width: 100%;
     height: 100vh;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.35)), url(ad.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75),rgba(0,0,0,0.75)),url(apage.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     font-family: sans-serif;
+    
 }
-
-.navbar {
-    width: 85%;
+.navbar{
+    width: 100%;
     margin: auto;
-    padding: 35px 0;
+    padding: 20px 0;
+    background-color: rgba(255, 255, 255, 0.038);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-family: sans-serif;
 }
-
-.navbar ul li {
+.navbar ul li{
     list-style: none;
     display: inline-block;
-    margin: 0 20px;
+    margin: 0 15px;
     position: relative;
+    font-size: 15px;
 }
-
-.navbar ul li a {
+.navbar ul li a{
     text-decoration: none;
-    color: #fff;
+    color: white;
     text-transform: uppercase;
 }
-
-.navbar ul li::after {
+.navbar ul li::after{
     content: '';
     height: 3px;
     width: 0px;
-    background: skyblue;
+    background: #FFFF00;
     position: absolute;
     left: 0;
     bottom: -10px;
     transition: 0.5s;
 }
-
-.navbar ul li:hover::after {
-    width: 100%;
+.navbar ul li:hover::after{
+    width:100%;
 }
-
-.navbar h2 {
-    color: #fff;
-    padding-left: 15px;
+.navbar h2{
+    color: white;
+    padding-left: 28px;
 }
-
-.content {
+.content{
     width: 100%;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     text-align: center;
-    color: #fff;
     font-family: sans-serif;
 }
-
-.content h1 {
+.content h1{
     font-size: 70px;
+    font-family: Bookman Old Style;
     margin-top: 80px;
+    color: #fff;
 }
-
-.content p {
+.content p{
     margin: 20px auto;
+    font-size: large;
     font-weight: 100;
     line-height: 25px;
+    color: #fff;
 }
-
-button {
+button{
     width: 200px;
     padding: 15px 0;
     text-align: center;
     margin: 20px 10px;
     border-radius: 25px;
     font-weight: bold;
-    border: 2px solid skyblue;
+    border: 2px solid yellow;
     background: transparent;
     color: #fff;
     cursor: pointer;
     position: relative;
     overflow: hidden;
 }
-
-span {
-    background: skyblue;
+span{
+    background: #f0e030ba;
     height: 100%;
     width: 0;
     border-radius: 25px;
@@ -103,16 +97,14 @@ span {
     z-index: -1;
     transition: 0.5s;
 }
-
-button:hover span {
+button:hover span{
     width: 100%;
-}
 
-button:hover {
+}
+button:hover{
     border: none;
 }
-
-.content a {
+.content a{
     color: #fff;
     text-decoration: none;
 }
