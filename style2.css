@@ -40,7 +40,7 @@
     content: '';
     height: 3px;
     width: 0px;
-    background: skyblue;
+    background: rgb(245, 239, 69);
     position: absolute;
     left: 0;
     bottom: -10px;
@@ -84,7 +84,7 @@ button {
     margin: 20px 10px;
     border-radius: 25px;
     font-weight: bold;
-    border: 2px solid skyblue;
+    border: 2px solid rgb(245, 239, 69);
     background: transparent;
     color: #fff;
     cursor: pointer;
@@ -93,7 +93,7 @@ button {
 }
 
 span {
-    background: skyblue;
+    background: rgb(245, 239, 69);
     height: 100%;
     width: 0;
     border-radius: 25px;
