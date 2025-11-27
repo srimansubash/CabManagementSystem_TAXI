@@ -1,95 +1,110 @@
+/* ===============================
+   GLOBAL FIXES
+   =============================== */
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+    font-family: sans-serif;
+}
+
+/* -------------------------------------------------
+   BANNER (HEADER SECTION)
+--------------------------------------------------*/
 .banner {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.35)), url(ad.jpg);
     background-size: cover;
-    background-repeat: no-repeat;
     background-position: center;
-    font-family: sans-serif;
-    padding: 1.5rem;
-    border-bottom-right-radius: 100px;
-    border-bottom-left-radius: 100px;
+    background-repeat: no-repeat;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    position: relative;
 }
 
+/* NAVIGATION */
 .navbar {
-    width: 85%;
-    margin: auto;
-    padding: 35px 0;
+    width: 90%;
+    margin: 0 auto;
+    padding: 25px 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-family: sans-serif;
+    position: relative;
+    z-index: 10;
+}
+
+.navbar h2 {
+    color: #fff;
+    font-size: 35px;
+}
+
+.navbar ul {
+    display: flex;
+    gap: 25px;
 }
 
 .navbar ul li {
     list-style: none;
-    display: inline-block;
-    margin: 0 20px;
-    position: relative;
 }
 
 .navbar ul li a {
     text-decoration: none;
     color: #fff;
     text-transform: uppercase;
+    font-size: 15px;
+    position: relative;
 }
 
-.navbar ul li::after {
+.navbar ul li a::after {
     content: '';
     height: 3px;
-    width: 0px;
+    width: 0;
     background: skyblue;
     position: absolute;
     left: 0;
-    bottom: -10px;
-    transition: 0.5s;
+    bottom: -8px;
+    transition: 0.4s;
 }
 
-.navbar ul li:hover::after {
+.navbar ul li a:hover::after {
     width: 100%;
 }
 
-.navbar h2 {
-    color: #fff;
-    padding-left: 15px;
-}
-
-.design {
-    display: flex;
-    font-family: 'Footlight MT Light', sans-serif;
-    font-size: 35px;
-}
-
+/* -------------------------------------------------
+   HERO CONTENT (BOOK YOUR CABS)
+--------------------------------------------------*/
 .content {
-    width: 100%;
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
     text-align: center;
     color: #fff;
-    font-family: sans-serif;
+    z-index: 5;
 }
 
 .content h1 {
-    font-size: 70px;
-    margin-top: 80px;
+    font-size: 60px;
+    font-weight: bold;
 }
 
 .content p {
-    margin: 20px auto;
-    font-weight: 100;
+    margin-top: 20px;
+    font-size: 18px;
     line-height: 25px;
 }
 
+/* BUTTONS */
 button {
-    width: 200px;
-    padding: 15px 0;
-    text-align: center;
+    padding: 14px 35px;
     margin: 20px 10px;
     border-radius: 25px;
     font-weight: bold;
@@ -97,20 +112,21 @@ button {
     background: transparent;
     color: #fff;
     cursor: pointer;
+    font-size: 18px;
     position: relative;
     overflow: hidden;
 }
 
-span {
+button span {
     background: skyblue;
     height: 100%;
-    width: 0;
+    width: 0%;
     border-radius: 25px;
     position: absolute;
     left: 0;
     bottom: 0;
     z-index: -1;
-    transition: 0.5s;
+    transition: 0.4s;
 }
 
 button:hover span {
@@ -121,71 +137,175 @@ button:hover {
     border: none;
 }
 
-.content a {
-    color: #fff;
+button a {
+    color: white;
     text-decoration: none;
 }
 
-.context {
+/* ===============================
+   BODY & MAIN WRAPPER
+   =============================== */
+.bodyboy {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #eff0f4;
+    padding: 40px 20px;
     width: 100%;
+}
+
+/* ===============================
+   HEADING
+   =============================== */
+.heading {
+    margin-bottom: 30px;
+    text-align: center;
+    color: #333;
+    font-size: 32px;
+    font-weight: 600;
+}
+
+/* ===============================
+   CONTAINER
+   =============================== */
+.container {
+    width: 100%;
+    max-width: 1400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 30px 10px;
+    gap: 40px;
+}
+
+/* ===============================
+   WATER DROP BOXES
+   =============================== */
+.container .drop {
+    position: relative;
+    width: 330px;
+    height: 330px;
+    border-radius: 30% 70% 85% 15% / 45% 59% 41% 55%;
+    box-shadow:
+        inset 20px 20px 20px rgba(0, 0, 0, 0.05),
+        25px 35px 20px rgba(0, 0, 0, 0.05),
+        25px 30px 30px rgba(0, 0, 0, 0.05),
+        inset -20px -20px 25px rgba(255, 255, 255, 0.9);
+    transition: 0.4s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+}
+
+.container .drop p {
+    margin-left: 0;
+    text-align: center;
+    margin-top: 15px;
+}
+
+/* Unique shapes */
+.container .drop:nth-child(1) {
+    border-radius: 30% 70% 85% 15% / 45% 59% 41% 55%;
+}
+
+.container .drop:nth-child(2) {
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+}
+
+.container .drop:nth-child(3) {
+    border-radius: 18% 82% 81% 19% / 49% 34% 66% 51%;
+}
+
+/* Hover effect */
+.container .drop:hover {
+    border-radius: 50%;
+}
+
+/* Shine effect */
+.container .drop::before {
+    content: '';
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: larger;
-    color: #fff;
-    font-family: sans-serif;
+    top: 40px;
+    left: 55px;
+    width: 35px;
+    height: 35px;
+    background: #fff;
+    border-radius: 50%;
+    opacity: 0.9;
 }
 
-.main-content .context {
-    justify-content: space-around;
-    background-color: #37474F;
-    border-radius: 40px;
-    padding: 40px;
+.container .drop::after {
+    content: '';
+    position: absolute;
+    top: 80px;
+    left: 90px;
+    width: 15px;
+    height: 15px;
+    background: white;
+    border-radius: 50%;
+    opacity: 0.9;
 }
 
-.context h1 {
-    font-size: 50px;
-    margin-top: 80px;
+/* ===============================
+   INSIDE CONTENT
+   =============================== */
+.container .drop .add {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
+    gap: 15px;
 }
 
-.context p {
-    margin: 20px auto;
-    font-weight: 100;
-    line-height: 25px;
-    text-align: center;
+.container .drop .add h2 {
+    width: 80px;
+    height: 80px;
+    background-color: #eff0f4;
+    border-radius: 50%;
+    box-shadow:
+        inset 2px 5px 10px rgba(0, 0, 0, 0.1),
+        inset -2px -5px 10px rgba(255, 255, 255, 1),
+        15px 15px 10px rgba(0, 0, 0, 0.05),
+        15px 10px 15px rgba(0, 0, 0, 0.025);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
 }
 
-.context h2 {
-    margin: 20px auto;
-    font-weight: 100;
-    line-height: 25px;
-    padding-left: 10%;
-    font-family: 'Courier New', Courier, monospace;
-}
-
-/* Footer Styles */
+/* -------------------------------------------------
+   FOOTER SECTION
+--------------------------------------------------*/
 .footer {
     width: 100%;
     background: linear-gradient(to right, #00093c, #2d0b00);
     color: #fff;
-    padding: 100px 0 30px;
-    border-top-left-radius: 125px;
-    font-size: 13px;
-    line-height: 20px;
-    margin-top: 50px;
+    padding: 70px 20px;
+    border-top-left-radius: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
 }
 
-.footer .col-1, .footer .col-2, .footer .col-3 {
-    width: 250px;
-    display: inline-block;
-    padding-left: 60px;
+.footer .col-1,
+.footer .col-2,
+.footer .col-3 {
+    width: 260px;
+    text-align: center;
 }
 
 .footer h3 {
-    width: fit-content;
-    margin-bottom: 40px;
-    position: relative;
+    margin-bottom: 20px;
+    font-size: 20px;
 }
 
 .footer .col-1 a {
@@ -196,18 +316,87 @@ button:hover {
 }
 
 .footer .social-icons {
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 .footer .social-icons i {
     width: 40px;
     height: 40px;
+    background: #0d8bf2;
+    color: white;
     border-radius: 50%;
     text-align: center;
     line-height: 40px;
-    font-size: 20px;
-    color: #fff;
-    background: #0d8bf2;
-    margin-right: 15px;
+    margin-right: 10px;
     cursor: pointer;
+}
+
+/* -------------------------------------------------
+   RESPONSIVE DESIGN (MOBILE FRIENDLY)
+--------------------------------------------------*/
+
+/* Tablets */
+@media (max-width: 768px) {
+    .navbar ul {
+        display: none;
+    }
+
+    .content h1 {
+        font-size: 45px;
+    }
+
+    button {
+        width: 80%;
+        margin: 10px auto;
+        display: block;
+    }
+
+    .heading {
+        font-size: 26px;
+    }
+
+    .container .drop {
+        width: 280px;
+        height: 280px;
+    }
+
+    .container {
+        gap: 30px;
+    }
+}
+
+/* Phones */
+@media (max-width: 480px) {
+    .content {
+        padding-top: 60px;
+    }
+
+    .content h1 {
+        font-size: 36px;
+    }
+
+    .bodyboy {
+        padding: 20px 10px;
+    }
+
+    .heading {
+        font-size: 24px;
+    }
+
+    .container .drop {
+        width: 240px;
+        height: 240px;
+    }
+
+    .footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer .col-1,
+    .footer .col-2,
+    .footer .col-3 {
+        width: 100%;
+        text-align: center;
+    }
 }
